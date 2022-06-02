@@ -4,7 +4,7 @@
 /**
  * main - Prints out the result
  *
- * Return: returns 1 As the output
+ * Return: returns 1 As the ou
  */
 int main(void)
 {
