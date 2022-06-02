@@ -12,6 +12,5 @@ int main(void)
 2015-10-19\n";
 
 	write(2, msg, sizeof(msg));
-	fprintf(stderr,"");
 	return (1);
 }
