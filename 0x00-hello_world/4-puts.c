@@ -1,9 +1,10 @@
 #include <stdio.h>
 
 /**
- * Here are my comments
- *
- * and even more commemts
+ *  * main - Entry point
+ *   *
+ *    * Return: Always 0 (Success)
+ *     
  */
 int main(void)
 {
