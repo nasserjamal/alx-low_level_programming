@@ -3,7 +3,7 @@
 /**
  * main - Entryto the program
  *
- * Return 0 i.e success always. Remember you will always be successfull
+ * Return: 0 i.e success always. Remember you will always be successfull
  */
 int main(void)
 {
