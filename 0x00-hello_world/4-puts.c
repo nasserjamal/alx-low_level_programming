@@ -1,5 +1,6 @@
 #include <stdio.h>
-/*Bettyy utaniuwwaa. mwenyewe sina time hapa*/
+
+/*Here are my comments*/
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
