@@ -24,19 +24,19 @@ int main(void)
 					{
 						if ((i * 10) + j <= (k * 10) + l)
 						{
-							putchar(i+48);
-							putchar(j+48);
+							putchar(i + 48);
+							putchar(j + 48);
 							putchar(' ');
-							putchar(k+48);
-							putchar(l+48);
-						if (i == 9 && j == 8 && k == 9 && l == 9 )
-						{
-						}
-						else
-						{
-							putchar(',');
-							putchar(' ');
-						}
+							putchar(k + 48);
+							putchar(l + 48);
+							if (i == 9 && j == 8 && k == 9 && l == 9 )
+							{
+							}
+							else
+							{
+								putchar(',');
+								putchar(' ');
+							}
 						}
 					}
 				}
