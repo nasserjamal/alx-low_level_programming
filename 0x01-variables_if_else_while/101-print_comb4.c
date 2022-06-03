@@ -22,15 +22,15 @@ int main(void)
 				}
 				else
 				{
-					if ( k >= j && j >= i && k != j && j != i)
+					if (k >= j && j >= i && k != j && j != i)
 					{
 						putchar(i);
 						putchar(j);
 						putchar(k);
-						if(i == 55 && j == 56 && k == 57)
+					if (i == 55 && j == 56 && k == 57)
 						{
 						}
-						else
+					else
 						{
 							putchar(',');
 							putchar(' ');
