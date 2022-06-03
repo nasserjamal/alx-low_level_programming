@@ -22,14 +22,14 @@ int main(void)
 					}
 					else
 					{
-				if ((i * 10) + j <= (k * 10) + l)
-						{
-							putchar(i + 48);
-							putchar(j + 48);
-							putchar(' ');
-							putchar(k + 48);
-							putchar(l + 48);
-				if (i == 9 && j == 8 && k == 9 && l == 9)
+					if ((i * 10) + j <= (k * 10) + l)
+					{
+						putchar(i + 48);
+						putchar(j + 48);
+						putchar(' ');
+						putchar(k + 48);
+						putchar(l + 48);
+					if (i == 9 && j == 8 && k == 9 && l == 9)
 							{
 							}
 					else
