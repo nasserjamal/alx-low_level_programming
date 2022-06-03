@@ -22,7 +22,7 @@ int main(void)
 					}
 					else
 					{
-						if (i <= k && j <= l)
+						if ((i * 10) + j <= (k * 10) + l)
 						{
 							putchar(i+48);
 							putchar(j+48);
