@@ -17,27 +17,29 @@ int main(void)
 			{
 				for (l = 0; l < 10; l++)
 				{
-					if (i == k && j == l)
+				if (i == k && j == l)
+				{
+				}
+				else
+				{
+				if ((i * 10) + j <= (k * 10) + l)
+				{
+					putchar(i + 48);
+					putchar(j + 48);
+					putchar(' ');
+					putchar(k + 48);
+					putchar(l + 48);
+					if (i == 9 && j == 8 && k == 9 && l == 9)
 					{
 					}
 					else
 					{
-					if ((i * 10) + j <= (k * 10) + l)
-					{
-						putchar(i + 48);
-						putchar(j + 48);
-						putchar(' ');
-						putchar(k + 48);
-						putchar(l + 48);
-					if (i == 9 && j == 8 && k == 9 && l == 9)
-							{
-							}
-					else
-							{
-							putchar(',');
-							putchar(' ');
-							}
-					}}
+					putchar(',');
+					putchar(' ');
+					}
+					
+				}
+				}
 				}
 			}
 		}
