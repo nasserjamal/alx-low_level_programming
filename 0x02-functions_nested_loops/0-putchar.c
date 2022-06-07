@@ -5,10 +5,12 @@
  * Return: return success always
  */
 int main(void)
-{	char word[]="_putchar\n";
-	int i=0;
+{
+	char word[] = "_putchar\n";
+	int i = 0;
 
-	while( i< 8){
+	while (i < 9)
+	{
 		_putchar(word[i]);
 		i++;
 	}
