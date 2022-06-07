@@ -19,7 +19,7 @@ void times_table(void)
 			if (tens != 48)
 				_putchar(tens);
 			else
-				if(y!=0)
+				if (y != 0)
 				_putchar(' ');
 			_putchar('0' + (x * y) % 10);
 			if (y != 9)
