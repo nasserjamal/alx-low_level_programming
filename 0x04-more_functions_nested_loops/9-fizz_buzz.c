@@ -1,25 +1,40 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
- * main - The entry point to the program
- * Return: Always 0 Success
+ * main - Entry to the code
+ *
+ * Return: Return nothing
  */
 
 int main(void)
 {
-	int a = 1;
+	int i = 1;
 
-	while (a <= 100; a++)
+	while (i <= 100)
 	{
-		if (a % 3 == '0')
-			printf("Fizz ");
-		else if (a % 5 == '0')
-			printf("Buzz ");
-		else if (a % 3 == '0' && a % 5 == '0')
-			printf("FizzBuzz ");
+		if (i % 3 == 0 && i % 5 == 0)
+		{
+			printf("FizzBuzz");
+		}
+		else if (i % 3 == 0)
+		{
+			printf("Fizz");
+		}
+		else if (i % 5 == 0)
+		{
+			printf("Buzz");
+		}
 		else
-			printf("%d ", a);
+		{
+			printf("%i", i);
+		}
+		if (i != 100)
+		{
+			putchar(' ');
+		}
+
+		i++;
 	}
+	putchar('\n');
 	return (0);
 }
