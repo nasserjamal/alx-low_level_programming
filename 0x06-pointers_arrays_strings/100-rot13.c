@@ -1,10 +1,10 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * rot13 - Encodes a string using rot13.
+ * rot13 - Encoddes the string to 113
  * @str: The string to be encoded.
  *
- * Return: A pointer to the encoded string.
+ * Return: The encoded string
  */
 char *rot13(char *str)
 {
