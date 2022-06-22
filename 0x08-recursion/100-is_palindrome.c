@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * check_palindrome - Checks if a string is a palindrome.
+ * checkSpaces - Checks if a string is a palindrome.
  * @s: The string to be checked.
  * @len: len of s
  * @index: The index of the string to be checked.
@@ -16,7 +16,7 @@ int checkSpaces(char *s, int len, int index)
 		return (1);
 
 	if (s[index] == s[len - index - 1])
-		return (check_palindrome(s, len, index + 1));
+		return (checkSpaces(s, len, index + 1));
 
 	return (0);
 }
