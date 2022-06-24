@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <stdbool.h>
+#include "main.h"
 
 /**
  * convert -  prints the minimum number
