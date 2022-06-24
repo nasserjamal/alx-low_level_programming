@@ -5,7 +5,7 @@
 
 /**
  * convert -  prints the minimum number
-of coins to make change for an amount of money.
+ *of coins to make change for an amount of money.
  * @i: Passed in variable from main for calculations
  * Return: The number of coins needed minimum for the passed in variable
  */
