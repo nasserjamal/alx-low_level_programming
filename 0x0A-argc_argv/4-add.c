@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <string.h>
 
 /**
  * main - adds several numbers
@@ -14,6 +15,9 @@ int main(int argc, char *argv[])
 	int sum = 0;
 	int arg;
 	int i = 1;
+	int len = 0;
+	int j = 0;
+	char *current;
 
 	if (argc == 1)
 	{
@@ -22,11 +26,16 @@ int main(int argc, char *argv[])
 	}
 	for (i = 1; i < argc; i++)
 	{
-		arg = *argv[i];
-		if (!isdigit(arg))
+		current = argv[i];
+		len = strlen(current);
+		for (j = 0; j < len; j++)
 		{
-			printf("Error\n");
-			return (1);
+			arg = *(current + j);
+			if (!isdigit(arg))
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
 		sum += atoi(argv[i]);
 	}
