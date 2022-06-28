@@ -12,11 +12,14 @@
 char *_strdup(char *str)
 {
 	char *newSpace;
+	int length = 0;
+	int i = 0;
 
 	if (str == NULL)
 		return (NULL);
-	newSpace = malloc(sizeof(char) * (strlen(str) + 1));
-	printf("%ld\n",strlen(str));
+	for (i = 0; str[i]; i++)
+		length++;
+	newSpace = malloc(sizeof(char) * (length + 1));
 	if (newSpace == NULL)
 		return (NULL);
 	newSpace = strdup(str);
