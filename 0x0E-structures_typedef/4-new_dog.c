@@ -5,7 +5,7 @@
 char *_strcpy(char *dest, char *src);
 int _strlen(char *s);
 /**
- * new_dog - create new data structure for dog
+ * new_dog - create a new dog
  * @name: name of dog
  * @age: age of dog
  * @owner: dog owner
