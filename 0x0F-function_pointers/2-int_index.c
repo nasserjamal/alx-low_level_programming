@@ -6,7 +6,7 @@
  * @array: Array to be searched
  * @size: Size ofthe array
  * @cmp: Pointer to the call back function
- * @return: Index of array if cmp !=0 else 0
+ * Return: Index of array if cmp !=0 else 0
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {

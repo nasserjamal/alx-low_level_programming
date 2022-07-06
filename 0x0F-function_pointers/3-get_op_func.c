@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 /**
- * get_op_func: Gets the operator function object
+ * get_op_func - Gets the operator function object
  * @s: The operator passed
  * Return: pointer to the op function
  */

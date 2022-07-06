@@ -7,7 +7,7 @@
  * main - Entry to the program
  * @argc: No of arguments
  * @argv: Array of arguments
- * @Return: 0 if successfull
+ * Return: 0 if successfull
  * 98 if no of arguments is invalid
  * 99 if invalid operand
  * 100 if division by 0
