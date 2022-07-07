@@ -3,6 +3,17 @@
 
 #include <stdarg.h>
 
+/**
+ * charStructures - Structure holding symbol and func
+ * @symbol: var type
+ * @print: Function
+ */
+typedef struct charStructures
+{
+char *varRep;
+void (*print)(va_list);
+} charStructures;
+
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);

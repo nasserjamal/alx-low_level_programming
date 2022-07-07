@@ -2,17 +2,6 @@
 #include <stdarg.h>
 #include "variadic_functions.h"
 
-/**
- * charStructures - Structure holding symbol and func
- * @symbol: var type
- * @print: Function
- */
-typedef struct charStructures
-{
-    char *varRep;
-    void(*print)(va_list);
-}charStructures;
-
 
 /**
  * print_all - Prints different types variables
