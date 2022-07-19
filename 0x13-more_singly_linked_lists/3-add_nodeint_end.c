@@ -41,7 +41,7 @@ return (addLastNode(head, current, n));
 
 /**
  * add_nodeint_end -adds nodes at the end
- * @head -head of the list
+ * @head: -head of the list
  * @n: value added
  * Return: (listint_t*) address of new element
  */
