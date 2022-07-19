@@ -10,7 +10,7 @@ listint_t *h;
 if (*head == NULL)
 	return (0);
 h =  *head;
-
+free(*head);
 *head = h->next;
 return (h->n);
 }
