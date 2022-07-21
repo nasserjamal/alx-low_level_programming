@@ -6,7 +6,6 @@
  */
 void print_binary(unsigned long int n)
 {
-	printf("**%ld\n",n);
 if (n > 1)
 		print_binary(n >> 1);
 
