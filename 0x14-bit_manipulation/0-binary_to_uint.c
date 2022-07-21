@@ -34,10 +34,9 @@ return (ans);
  * @pow: Power index
  * Return: (int) the value
  */
-int power(int base, int pow)
+long int power(int base, unsigned int pow)
 {
-int ans = 1;
-
+long int ans = 1;
 while (pow)
 {
 	ans = ans * base;
