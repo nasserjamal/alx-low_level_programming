@@ -13,6 +13,6 @@ if (n == NULL)
 return (-1);
 if (index >= (sizeof(unsigned long int) * 8))
 return (-1);
-*n = (*n | 1 >> index);
+*n = (*n | (1 >> index));
 return (1);
 }
