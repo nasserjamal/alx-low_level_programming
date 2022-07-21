@@ -7,7 +7,7 @@
 int get_endianness(void)
 {
 unsigned long int a = 0x41FFFF42;
-char *b = (void*)&a;
+char *b = (char *)&a;
 if (b[0] == 'A')
 return (0);
 else
