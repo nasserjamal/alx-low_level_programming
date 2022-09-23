@@ -20,7 +20,7 @@ int main(void)
     printf("Insertion is %d\n",hash_table_set(ht, "stylist", "Verystylist"));
     printf("Insertion is %d\n",hash_table_set(ht, "subgenera", "Subgenera"));
     printf("Insertion is %d\n",hash_table_set(ht, "stylist", "Seems not very stylist"));
-    printf("Insertion is %d\n",hash_table_set(ht, "here", ""));
+    printf("Insertion is %d\n",hash_table_set(ht, "here", NULL));
 
     hd = ht->array[key_index((const unsigned char *)"here", ht->size)];
     while (hd != NULL)
