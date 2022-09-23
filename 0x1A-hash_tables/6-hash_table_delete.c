@@ -22,11 +22,11 @@ void hash_table_delete(hash_table_t *ht)
 		{
 			previous = current;
 			current = current->next;
-            free(previous->value);
+			free(previous->value);
 			free(previous);
 		}
 
 	}
-    free(ht->array);
+	free(ht->array);
 	free(ht);
 }
