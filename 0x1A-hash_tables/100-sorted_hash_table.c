@@ -32,14 +32,12 @@ shash_table_t *shash_table_create(unsigned long int size)
  * @ht: Pointer to the hash table
  * @key: The key of the new node
  * @value: Value of the new node
- * Return int: 1 if success 0 otherwise
+ * Return: int: 1 if success 0 otherwise
  */
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
 	shash_node_t *newNode;
 	shash_node_t *dupCheck;
-	shash_node_t *sNavigate;
-	size_t counter = 0;
 	int index;
 
 	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
@@ -53,7 +51,6 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	newNode->next = NULL;
 	newNode->snext = NULL;
 	newNode->sprev = NULL;
-
 	if (ht->array[index] != NULL)
 	{
 		/* A value exists, Collision management*/
@@ -72,28 +69,37 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 			}
 			dupCheck = dupCheck->next;
 		}
-
 		newNode->next = ht->array[index];
 	}
 	ht->array[index] = newNode;
+	return (updateSList(newNode, ht, key));
+}
 
+/**
+ * updateSList - Updates the sorted list
+ *
+ * @newNode: New node
+ * @ht: hash table
+ * @key: The key
+ * Return: int
+ */
+int updateSList(shash_node_t *newNode, shash_table_t *ht, const char *key)
+{
+	shash_node_t *sNavigate;
+	size_t counter = 0;
 
-	/*Insert into the sorted list*/
 	if (ht->shead == NULL || ht->stail == NULL)
 	{
-		/* Sorted list is empty */
 		ht->shead = newNode;
 		ht->stail = newNode;
 	}
 	else
 	{
-		/* Sorted list already has values*/
 		sNavigate = ht->shead;
 		while (sNavigate != NULL)
 		{
 			for (counter = 0; counter < strlen(key) || counter < strlen(sNavigate->key); counter++)
 			{
-				/* Get the alphabetic position */
 				if (sNavigate->key[counter] > newNode->key[counter] || strlen(newNode->key) <= counter)
 				{
 					newNode->snext = sNavigate;
@@ -106,16 +112,10 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 					return (1);
 				}
 				else if (sNavigate->key[counter] < newNode->key[counter] || strlen(sNavigate->key) <= counter)
-				{
 					break;
-				}
-
-
 			}
-
-			if(sNavigate->snext == NULL)
+			if (sNavigate->snext == NULL)
 			{
-				/*End of list*/
 				sNavigate->snext = newNode;
 				newNode->sprev = sNavigate;
 				ht->stail = newNode;
@@ -124,10 +124,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 			else
 				sNavigate = sNavigate->snext;
 		}
-
 	}
-
-
 	return (1);
 }
 
