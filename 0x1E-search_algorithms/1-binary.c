@@ -10,15 +10,17 @@
  */
 int binary_search(int *array, size_t size, int value)
 {
-	size_t mid_point = size / 2;
+	size_t mid_point = (size - 1) / 2;
 
-	print_array(array, 0, size);
 	if (array == NULL)
 		return (-1);
+	print_array(array, 0, size);
+	if (array[mid_point] == value)
+		return (mid_point);
 	if (array[mid_point] > value)
 		return (binary_sub_search(array, 0, mid_point, value));
 	else
-		return (binary_sub_search(array, mid_point, size, value));
+		return (binary_sub_search(array, mid_point + 1, size, value));
 
 }
 
@@ -34,20 +36,23 @@ int binary_search(int *array, size_t size, int value)
 */
 int binary_sub_search(int *array, size_t start, size_t end, int value)
 {
-	size_t mid_point = (start + end) / 2;
+	size_t mid_point = (start + end - 1) / 2;
 
 	print_array(array, start, end);
-	if (start == end - 1)
+	if (array[mid_point] == value)
+		return (mid_point);
+	if (start >= end - 2)
 	{
-		if (array[start] == value)
-			return (start);
+		print_array(array, start + 1, end);
+		if (array[start + 1] == value)
+			return (start + 1);
 		else
 			return (-1);
 	}
 	if (array[mid_point] > value)
 		return (binary_sub_search(array, start, mid_point, value));
 	else
-		return (binary_sub_search(array, mid_point, end, value));
+		return (binary_sub_search(array, mid_point + 1, end, value));
 }
 
 /**
